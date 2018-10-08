@@ -31,6 +31,11 @@ int main() {
 	ComplexNumbers number5 = number4 + number3;
 	std::cout << number5 << "\n";
 	number5.print();
+	std::cout << "\n";
+
+	std::cout << number5 - number3 << "\n";
+
+
 
 
 	return 0;

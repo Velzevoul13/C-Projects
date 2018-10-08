@@ -49,6 +49,7 @@ std::ostream& operator<<(std::ostream& output,const ComplexNumbers& other){		//O
 }
 
 
+
 ComplexNumbers operator+(const ComplexNumbers& complex1,const ComplexNumbers& complex2){ //Overloading the 'plus' operator for addition of complex numbers.
 	return ComplexNumbers (complex1.getreal()+complex2.getreal(),complex1.getimaginary()+complex2.getimaginary());
 }
@@ -63,6 +64,18 @@ ComplexNumbers operator+( double number,const ComplexNumbers& complex){	//Overlo
 
 
 
+
+ComplexNumbers operator-(const ComplexNumbers& complex1,const ComplexNumbers& complex2){	//Overloading the 'minus' operator for subtraction of complex numbers.
+	return ComplexNumbers(complex1.getreal()-complex2.getreal(),complex1.getimaginary()-complex2.getimaginary());
+}
+
+ComplexNumbers operator-(const ComplexNumbers& complex,double number){ 	//Overloading the 'minus' operator for subtraction of a complex number and real number.
+	return ComplexNumbers(complex.getreal()-number,complex.getimaginary());
+}
+
+ComplexNumbers operator-(double number,const ComplexNumbers& complex){ 	//Overloading the 'minus' operator for subtraction of a complex number and real number (real number is written first)
+	return ComplexNumbers(complex.getreal()-number,complex.getimaginary());
+}
 ComplexNumbers::~ComplexNumbers() {}
 
 } /* namespace complexnum */

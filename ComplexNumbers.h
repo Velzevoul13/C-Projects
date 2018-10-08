@@ -37,9 +37,14 @@ public:
 };
 
 std::ostream& operator<<(std::ostream&,const ComplexNumbers&);	//Overloading the 'left bit shift' operator for printing.
+
 ComplexNumbers operator+(const ComplexNumbers&,const ComplexNumbers&); //Overloading the 'plus' operator for addition of complex numbers.
-ComplexNumbers operator+(const ComplexNumbers&,double number); 	//Overloading the 'plus' operator for addition of a complex number and real number.
-ComplexNumbers operator+( double,const ComplexNumbers&); 	//Overloading the 'plus' operator for addition of a complex number and real number (real number is written first).
+ComplexNumbers operator+(const ComplexNumbers&,double); 	//Overloading the 'plus' operator for addition of a complex number and real number.
+ComplexNumbers operator+(double,const ComplexNumbers&); 	//Overloading the 'plus' operator for addition of a complex number and real number (real number is written first).
+
+ComplexNumbers operator-(const ComplexNumbers&,const ComplexNumbers&); //Overloading the 'minus' operator for subtraction of complex numbers.
+ComplexNumbers operator-(const ComplexNumbers&,double); 	//Overloading the 'minus' operator for subtraction of a complex number and real number.
+ComplexNumbers operator+(double,const ComplexNumbers&); 	//Overloading the 'minus' operator for subtraction of a complex number and real number (real number is written first).
 
 
 } /* namespace complexnum */
